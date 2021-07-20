@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<h1>Presion Security System</h1>
+    <input type="text" id="custom-msg" placeholder="Enter custom alart">
+    <button>show message</button>
+    <div id="message"> </div>
+
+
+</body>
+
+</html>
+<script>
+    function shoealart(){
+        
+    }
+
+    function showcustom() {
+        var msg = documment.getElementById("custom-msg").value;
+        var div = documment.getElementById("message").value;
+
+        div.append(msg);
+        /// create node
+
+        // hoew to create a node
+        var h1 = documment.createElement(h1);
+        h1.textContent = msg;
+
+        div.appendChild(h1);
+
+
+    }
+   // div.append(msg);
+
+
+</script>

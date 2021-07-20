@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8" />
+       <meta http-equiv="X-UA-compatible" content="IE=edge" />
+
+       <meta name="viewport" content=" width=device-width, initial-scale=1.0" >
+       <title>Document</title>
+    </head>
+    <body>
+    <h1>Prision Securtity System </h1>
+    <button onClick="showAlert('main Door breach')">Main Door breach</button>
+    <button onClick="showAlert('run , riot')">Prision Riot</button>
+    <button onclick="showAlert('call 108')">Emergency</button>
+    <button onclick="showAlert('wake up its 6 oclock')">alarm</button>
+    <button onclick="showAlert('please switch off the moter')">tankerfull</button>
+    <button onclick="showAlert('AlERT! dANGEROUS ROAD')">EXPRESSWAY</button>
+
+    <input type="text" id="custom_msg" placeholder="Enter custom Alart" />
+    <button onclick="showCustomAlert()">show message</button>
+    <div  id="message">
+
+    </div>
+  
+   
+      <script>
+        function showAlert(msg) {
+            alert(msg);
+        }
+      function showCustomAlert()
+      {
+         var msg = document.getElementById("custom_msg").value;
+      
+         var div = document.getElementById("message");
+         div.append(msg);
+         div.innerHTML = msg;
+         var h1 = document.createElement("h1");
+         h1.textContent = msg;
+      }
+       
+        
+
+
+
+    </script>
+  
+   </body>
+   
+    </html>

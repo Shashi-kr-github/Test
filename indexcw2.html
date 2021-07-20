@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-compatible" content="IE=edge" />
+
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  <h1>Note Taking App</h1>
+  <select  id="day"></select>
+<option value="Day1">Day1</option>
+<option value="Day2">Day2</option>
+<option value="Day3">Day3</option>
+<option value="Day4">Day4</option>
+</select>
+<input onkeypress="addNote(event)" type="text" id="note"/>
+<body>
+
+
+
+
+</body>
+
+</html>
+<script>
+    // take input from user- Note,string
+    //2. select the Day1 - "in appendchild i cant add string",implement select tab
+    var notes = {
+        day1:[],
+        day2:[],
+        day3: [],
+        day4: [],
+
+    };
+      function addNote(e){
+        if(e.key === 'Enter' ){
+           var note = document.getElementById("note").value;
+           var day = documment.getElementById("day").value;
+         
+           if(day === "Day1")
+           {
+           notes.day1.push(note);
+           //console.log("notes:" ,notes);
+           }
+        }
+      }
+</script>

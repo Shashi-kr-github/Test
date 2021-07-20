@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+</head>
+<style>
+
+</style>
+
+<body>
+    <h1>Talkal booking System</h1>
+ 
+    <button onclick="checkAvailability()">Notifyme</button>
+
+
+
+</body>
+
+</html>
+<script>
+    
+let  MtoG = ["A","B","C","D","E","F","G","F"];
+    let   BtoG = ["A", "B", "C", "D", "E", "F", "G", "F"]
+     let PtoG = ["A", "B", "C", "D", "E", "F", "G", "F"]
+
+     async function checkAvailability()
+     {
+         let promise = new Promise(function(resolve,reject){
+           setInterval(function(){
+                 if (MtoG.length < 5) {
+                   resolve('train 1 is available')
+               }
+               else if (BtoG.length < 5) {
+                   resolve('train 2 is availble')
+               }
+               else if (PtoG.length < 5) {
+                   resolve('train 3 is available')
+               }
+           }, 3000);
+
+         });
+
+          let res = await promise;
+          alert(res);
+     }
+
+     function  cancleTicket()
+     {
+         let cencle_speed1 = Math.ceil(Math.random()*5);
+          let cencle_speed2 = Math.ceil(Math.random() * 5)
+           let cencle_speed3 = Math.ceil(Math.random() * 5);
+
+
+           setTimeout(function(){
+               MtoG.pop();
+               console.log( "MtoG :",MtoG);
+
+           }, cencle_speed1*1000);
+
+           
+         setTimeout(function () {
+             BtoG.pop();
+             console.log('BtoG :', BtoG);
+
+         }, cencle_speed2 * 1000);
+         
+         setTimeout(function () {
+             PtoG.pop();
+             console.log('PtoG:',PtoG);
+
+         }, cencle_speed3 * 1000);
+     }
+     var interval = setInterval(cancleTicket,1000)
+
+</script>
